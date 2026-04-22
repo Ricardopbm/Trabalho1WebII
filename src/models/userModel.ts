@@ -26,6 +26,7 @@ export class User {
     }
 
     static create(name: string, email: string, password: string, typeUser: string): User {
+<<<<<<< HEAD
 
         const passwordHash = bcrypt.hashSync(password, 10);
 
@@ -44,6 +45,23 @@ export class User {
         );
 
         return user;
+=======
+    
+    const passwordHash = bcrypt.hashSync(password, 10);
+
+    const  stmt = db.prepare("INSERT INTO users (name, email, password, typeUser) VALUES (?, ?, ?, ?)");
+    const result =stmt.run(name, email, passwordHash, typeUser);
+
+    const user = new User(
+        result.lastInsertRowid as number,
+        name,
+        email,
+        passwordHash,
+        typeUser
+    );
+
+    return user;
+>>>>>>> 08bc6c7b3cd77073f9d7d2954743706a3d5f425e
     }
 
     static getEmail(email: string): User | null {
@@ -55,10 +73,17 @@ export class User {
 
     static getAll(): User[] {
         const stmt = db.prepare("SELECT * FROM users");
+<<<<<<< HEAD
         const users = stmt.all() as User[];
         return users;
     }
 
+=======
+        const users = stmt.all() as User[]; 
+        return users;
+    }
+    
+>>>>>>> 08bc6c7b3cd77073f9d7d2954743706a3d5f425e
 
 }
 
