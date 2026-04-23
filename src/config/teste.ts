@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-
-
-
-import bcrypt from 'bcrypt';
-import { log } from 'console';
-=======
 // import db from './db';
->>>>>>> 08bc6c7b3cd77073f9d7d2954743706a3d5f425e
 
 // db.exec(`
 //   CREATE TABLE IF NOT EXISTS users (
@@ -16,7 +8,6 @@ import { log } from 'console';
 //     password TEXT NOT NULL,
 //     typeUser TEXT NOT NULL
 //   )
-<<<<<<< HEAD
 // `);
 
 
@@ -26,6 +17,3 @@ import { log } from 'console';
     
 
     
-=======
-// `);
->>>>>>> 08bc6c7b3cd77073f9d7d2954743706a3d5f425e

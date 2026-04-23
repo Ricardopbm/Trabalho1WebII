@@ -6,9 +6,8 @@ import { ParsedQs } from "qs";
 
 const usersRouter = Router();
 
-
-
 usersRouter.get("/users", (req, res) => controller.getAll(req, res));
+
 
 export default usersRouter;
 
